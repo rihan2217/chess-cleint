@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import io from "socket.io-client";
 import { Chessboard } from "react-chessboard";
 
-const socket = io("https://your-render-server.onrender.com", {
+const socket = io("https://chess-server-2.onrender.com", {
   transports: ["websocket"], // helps with CORS/timeouts
 });
 
