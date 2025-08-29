@@ -2,7 +2,9 @@ import React, { useEffect, useState } from "react";
 import io from "socket.io-client";
 import { Chessboard } from "react-chessboard";
 
-const socket = io("http://localhost:3001"); // ⚡ Change to Render server URL after deployment
+const socket = io("https://your-render-server.onrender.com", {
+  transports: ["websocket"], // helps with CORS/timeouts
+});
 
 function App() {
   const [gameFen, setGameFen] = useState("start");
